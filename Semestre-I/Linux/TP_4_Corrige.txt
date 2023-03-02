@@ -1,0 +1,31 @@
+Exo 1 : Commande ls 
+ 1 - ls /dev | less
+ 2 - ls --color
+ 3 - ls -a
+ 4 - ls -p
+ 5 - ls -l
+ 6 - ls -t
+ 7 - ls -rt
+ 8 - ls -rtl ou ls -tl
+ 9 - commenter avec les étudiants
+
+Exo 2 : 
+  1 - cat essai
+      less essai
+      more essai
+  2 -  pwd && ls -l > list.txt 
+  3 - mkdir -p /tmp/moduleR3/tp1
+  4 - cp list.txt /tmp/moduleR3/tp1
+  5 - mv list.txt /tmp/moduleR3
+  6 - rm /tmp/moduleR3/list.txt.
+  7 - rm  -rf /tpm/*
+  8 - ls -r /tmp      
+  9 - tail -n 3 /etc/passwd
+      
+  10 - tail -n 2 /etc/passwd | head -n 1 
+  11 - touch créé des fichier vides
+       file permet d'avoir le type d'un fichier
+  12 - touch /tmp/toto /tmp/titi /tmp/tata /tmp/tonton
+  13 - find /tmp -size  0 -print -delete
+       find /tmp -type f -empty -print -delete
+       rm $(find /tmp -size  0)

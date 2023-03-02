@@ -1,0 +1,62 @@
+Exo 1 : Commande ls 
+ 1 - Lister le repertoire /dev page par page
+      ls /dev | less
+      PS : 
+        1 - On parlera du "|" prochainement
+        2 - la touche "q" du clavier vous permets de sortir du "less"
+        3 - La commande less permets d'afficher le contenu d'un flux de données page par page
+
+ 2 - Afficher le listing en couleurs
+        option --color ?
+ 3 - Afficher aussi les fichiers cachés
+        option -a ? 
+ 4 - Mettre un '/' après les noms de répertoires 
+ 5 - Afficher le listing détaillé 
+        option -l  ?
+ 6 - Afficher les fichiers les plus récents en premier 
+ 7 - Afficher les fichiers les plus vieux en premier
+ 8 - Mixer avec l'option "l" afin d'afficher le listing détaillé
+ 9 - Que fait la commande "ls  -altp" ? Expliquer la sortie de cette commande
+
+Exo 2 : 
+Prérequis :  Créer un fichier essai et y mettre du contenu, exemple : 
+    > echo  "Exercice 2 du TP 4" > essai
+    PS :  La commande "touch" permet de créer des fichiers vides
+
+  1 - Donner une commande qui permet d'afficher le contenu du fichier essai.
+        PS : commande "cat" ?
+  2 - Afficher le nom du répertoire de travail et sauvegarder la liste des fichiers contenus dans le répertoire de travail dans un fichier nommé list.txt
+      pwd && ls -l > list.txt 
+        PS : On parlera du ">" prochainement dans le cours
+
+  3 - Donner une commande qui permet de créer dans /tmp un répertoire moduleR3 qui contient un rép1ertoire nommé tp1.
+        PS : la commande "mkdir" permets de créer des répertoires. L'option "-p" de cette commande est interressant
+
+  4 - Copier le fichier essai dans le répertoire /tmp/moduleR3/tp1
+        Ps : La commande "cp" est votre allié
+       
+  5 - Déplacer le fichier list.txt dans le répertoire /tmp/moduleR3
+        Ps : La commande "mv" est votre allié
+
+  6 - Effacer le fichier /tmp/moduleR3/list.txt.
+        Ps : La commande "rm" est votre allié
+
+  7 - Donner une commande qui permet d'effacer le contenu du /tmp. (y compris les sous-répertoires de /tmp)
+        Ps : La commande "rm" est votre allié
+  
+  8 - Donner une commande qui retourne le contenu du répertoire « / » trié en ordre alphabétique inversée.
+        Ps : La commande "ls" est votre allié. peut etre avec l'option "-r" ?
+
+  9 - Donner une commande qui affiche les trois premiers lignes du fichier /etc/passwd.
+        Ps : La commande "head" est votre allié
+
+  
+  10 - Donner une commande qui affiche l'avant dernière ligne de ce même fichier.
+      > tail -n 2 /etc/passwd | head -n 1
+
+  11 - Que fait la commande touch ? et la commande file ?
+  12 - Créer des fichiers vides (de tailles 0 octets) dans /tmp.
+  13 - Donner une commande qui permet d'effacer tous les fichiers vides se trouvant dans /tmp.
+       PS : La commande "find" vous sera utile
+
+

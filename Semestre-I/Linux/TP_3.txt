@@ -1,0 +1,41 @@
+1 - Tester les différentes consoles locales disponibles
+    Ctrl + alt + f(1,2,3,4,5)
+
+2 - Dans l’une de ces consoles, vérifier que le service ssh est démarré. quelques commandes utiles : 
+    > systemctl status sshd
+    > sudo systemctl start sshd
+    > sudo systemctl enable sshd
+    > sudo systemctl enable --now sshd
+
+    Vérifer les socket ouvertes
+    > sudo netstat -nltp
+
+3 - Récupérez l'adresse IP de votre VM et retenez là.
+    Pour cela, taper la commande suivante  : 
+    > ip a
+
+4 - Sur votre poste Windows, téléchargez putty ou mobaxterm
+    - Putty : https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+    - Mobaxterm : https://mobaxterm.mobatek.net/download.html
+
+5 - Configurer virtualbox pour rajouter une règle de port mapping
+    Protocole : TCP
+    Ip Hôte : 127.0.0.1
+    Ip Invités : 10.0.2.15
+    Port Hôte : 22
+    Port Invité : 22
+
+6 - Configurer votre émulateur de terminal pour accéder à votre VM via ssh
+    remote host : 127.0.0.1
+    username : votre user
+    port : Port hôte => 22
+
+7 - Désactiver l'interface graphique comme mode par défaut, et rebooter votre VM
+    > sudo systemctl set-default multi-user.target
+        Permets de mettre la console comme mode de lancement par defaut
+
+    > sudo systemctl set-default graphical.target
+        Permets de mettre la GUI comme mode de lancement par defaut
+
+PS : la commande "sudo"  devant certaines commandes, permets tout simplement de prendre les privilèges administrateurs
+
